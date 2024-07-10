@@ -1,0 +1,25 @@
+<div class="form-group">
+  <input 
+    type="search" 
+    class="form-control" 
+    [(ngModel)]="searchTerm"
+    placeholder="Search">
+</div>
+
+<table>
+    <thead>
+      <tr>
+        <th (click)="sort('id')">ID</th>
+        <th (click)="sort('name')">Name</th>
+        <th (click)="sort('email')">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
